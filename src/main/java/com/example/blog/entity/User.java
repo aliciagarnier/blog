@@ -8,13 +8,11 @@ import lombok.*;
 import java.io.Serializable;
 import java.util.List;
 
-
 @Getter
 @Setter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
 
 @Entity
 @Table(schema = "blog", name = "user")
@@ -36,6 +34,5 @@ public class User implements Serializable {
 
     @OneToMany(mappedBy = "user")
     private List<Post> posts;
-
 
 }
